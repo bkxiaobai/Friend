@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="angus.model">
+   
+	
+	<class name="Album" table="album">
+        <id name="id" column="a_id">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="a_name"/>
+        <property name="desc" column="a_desc"/>
+        <property name="createDate" column="a_create_date"/>
+        <property name="times" column="a_times"/>
+        <!-- lazy 属性 关闭延迟加载 -->
+		<many-to-one name="client" column="c_id" not-null="true" lazy="false"/>
+		<many-to-one name="kind" column="k_id" not-null="true" lazy="false"/>
+
+		<set name="albumWords" inverse="true">
+			<key column="a_id"/>
+			<one-to-many class="AlbumWord"/>
+		</set>
+		<!-- 若是取photos 中的值应该把lazy="false" 不然的话会报一个异常现在暂且将lazy=false 加上 -->
+		<set name="photos" inverse="true" lazy="false">
+			<key column="a_id"/>
+			<one-to-many class="Photo"/>
+		</set>
+    </class>
+
+
+</hibernate-mapping>

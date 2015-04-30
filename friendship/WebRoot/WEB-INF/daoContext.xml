@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的Schema信息 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="daoTemplate" abstract="true">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean name="adminDao" class="angus.dao.impl.AdminDaoImpl"
+		parent="daoTemplate"/>
+
+
+	<bean name="albumDao" class="angus.dao.impl.AlbumDaoImpl"
+		parent="daoTemplate"/>
+
+
+	<bean name="albumWordDao" class="angus.dao.impl.AlbumWordDaoImpl"
+		parent="daoTemplate"/>
+
+
+	<bean name="clientDao" class="angus.dao.impl.ClientDaoImpl"
+		parent="daoTemplate"/>
+
+
+	<bean name="kindDao" class="angus.dao.impl.KindDaoImpl"
+		parent="daoTemplate"/>
+
+	<bean name="photoDao" class="angus.dao.impl.PhotoDaoImpl"
+		parent="daoTemplate"/>
+
+
+	<bean name="photoWordDao" class="angus.dao.impl.PhotoWordDaoImpl"
+		parent="daoTemplate"/>
+
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="angus.model">
+   
+	
+	<class name="Kind" table="album_kind">
+        <id name="id" column="k_id">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="k_name"/>
+        <property name="desc" column="k_desc"/>
+		<set name="albums" inverse="true">
+			<key column="k_id"/>
+			<one-to-many class="Album"/>
+		</set>
+    </class>
+
+
+</hibernate-mapping>

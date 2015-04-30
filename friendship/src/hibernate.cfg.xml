@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='GBK'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<!-- SQL dialect -->
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+	<!-- Echo all executed SQL to stdout -->
+	<property name="show_sql">false</property>
+
+	<!-- Drop and re-create the database schema on startup -->
+	<property name="hbm2ddl.auto">update</property>
+	<property name="jdbc.batch_size">20</property>
+	<property name="myeclipse.connection.profile">mysql1</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/friend?useUnicode=true&amp;characterEncoding=utf8</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">921118</property>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<mapping resource="hbm/Admin.hbm.xml" />
+	<mapping resource="hbm/Album.hbm.xml" />
+	<mapping resource="hbm/AlbumWord.hbm.xml" />
+	<mapping resource="hbm/Client.hbm.xml" />
+	<mapping resource="hbm/Kind.hbm.xml" />
+	<mapping resource="hbm/Photo.hbm.xml" />
+	<mapping resource="hbm/PhotoWord.hbm.xml" />
+</session-factory>
+
+</hibernate-configuration>

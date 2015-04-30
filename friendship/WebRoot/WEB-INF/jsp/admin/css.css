@@ -1,0 +1,321 @@
+body {
+	background-color: #F1F9FF;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.td_top {
+	vertical-align: top;
+}
+.td_down {
+	text-align: left;
+	vertical-align: bottom;
+}
+.td_shang14 {
+	border-top-width: 14px;
+	border-top-style: solid;
+	border-top-color: #F1F9FF;
+}
+.td_shang12 {
+
+	border-top-width: 12px;
+	border-top-style: solid;
+	border-top-color: #F1F9FF;
+}
+.Statistic {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+.tuijian {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+}
+.td_all {
+	border: 1px solid #5D1108;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.td_shang14-2 {
+	border-top-width: 14px;
+	border-top-style: solid;
+	border-top-color: #F1F9FF;
+	vertical-align: top;
+}
+.pic_name {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	text-align: center;
+	vertical-align: bottom;
+}
+.page {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #999999;
+}
+.td_xia12 {
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+.td_shang-xia {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000000;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+.td_shang8_xia8 {
+	border-top-width: 8px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+a:link {
+	color: #999999;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #999999;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+}
+a.02:link {
+	color: #000000;
+	text-decoration: none;
+}
+a.02:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a.02:hover {
+	text-decoration: none;
+	color: #666666;
+}
+a.02:active {
+	text-decoration: none;
+}.about_pic {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+	vertical-align: top;
+	border-top-style: none;
+}
+.sail {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #85170C;
+	text-align: center;
+	font-weight: bold;
+}
+a.03:link {
+	color: #85170C;
+	text-decoration: none;
+}
+a.03:visited {
+	text-decoration: none;
+	color: #85170C;
+}
+a.03:hover {
+	text-decoration: none;
+	color: #D12512;
+}
+a.03:active {
+	text-decoration: none;
+}
+a.04:link {
+	color: #999999;
+	text-decoration: none;
+}
+a.04:visited {
+	text-decoration: none;
+	color: #999999;
+}
+a.04:hover {
+	text-decoration: underline;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #85170C;
+	font-weight: bold;
+}
+a.04:active {
+	text-decoration: none;
+}
+.time {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #999999;
+}
+.comment_name {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9C1C0E;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #5D1108;
+}
+.time2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #999999;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #5D1108;
+}
+.comment_info {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	border-top-width: 10px;
+	border-top-style: solid;
+	border-top-color: #F1F9FF;
+}
+.input_title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-align: right;
+}
+.input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	background-color: #F1F9FF;
+	height: 16px;
+	border: 1px solid #5D1108;
+}
+.input2 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	background-color: #F1F9FF;
+	height: 16px;
+}
+.input3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	background-color: #F1F9FF;
+	border: 1px solid #5D1108;
+}
+.Statistic2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	text-align: right;
+}
+.sayabout {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #85170C;
+	font-weight: bold;
+}
+.login_title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #5D1108;
+	text-align: right;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #5D1108;
+}
+.input4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	background-color: #F1F9FF;
+	height: 12px;
+	border-left-width: 2px;
+	border-left-style: solid;
+	border-left-color: #5D1108;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #F1F9FF;
+	border-right-color: #F1F9FF;
+	border-bottom-color: #F1F9FF;
+}
+.login_dixian {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #5D1108;
+}
+.input5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #2B50BD;
+	background-color: #F1F9FF;
+	border: 1px solid #5D1108;
+	height: 16px;
+	width: 40px;
+}
+.huanying {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #BD2211;
+	font-weight: bold;
+}
+a.05:link {
+	color: #9C1C0E;
+	text-decoration: none;
+}
+a.05:visited {
+	text-decoration: none;
+	color: #9C1C0E;
+}
+a.05:hover {
+	text-decoration: none;
+	color: #BB2211;
+}
+a.05:active {
+	text-decoration: none;
+.td_left {
+	text-align: left;
+}
+
+/*注册样式Ｓtart*/
+#RegisterDivWrap{
+	margin-top:20px;
+	font-size:12px;
+	margin-left:250px;
+	}
+	
+#RegisterDivWrap div{
+	margin-bottom:10px;
+	}
+	
+.red{color:#ff0000;}
+
+.RegFont{
+	font-size:14px;
+	font-weight:bold;
+	}
+	
+.darkRed{color:#5D1108;}
+
+.blue{color:#738FDF;}
+/*注册样式End*/

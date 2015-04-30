@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<project name="friendship" default="compile" basedir=".">
+
+	<property name="build.dir" value="."/>
+	<property name="src.dir" value="."/>
+
+ 
+	<path id="classpath">
+        <fileset dir=".\lib">
+            <include name="*.jar"/>
+        </fileset>
+        <pathelement path="classes"/>
+	</path>
+
+	<target name="compile">
+		<delete dir="classes/angus"/>
+
+		<javac destdir="${build.dir}/classes" debug="true"
+			deprecation="true" optimize="false" failonerror="true">
+
+			<src path="${src.dir}"/>
+
+			<classpath refid="classpath"/>
+		</javac>
+
+	</target>
+
+
+
+
+</project>

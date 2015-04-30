@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的Schema信息 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--后台管理员登录-->
+	<bean name="/adminLogin" class="angus.action.AdminLoginAction">
+		<property name="as" ref="adminService"/>
+	</bean>
+
+	<!--进入首页的action-->
+	<bean name="/info" class="angus.action.IndexAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--客户登录-->
+	<bean name="/clientLogin" class="angus.action.ClientLoginAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--客户注册时检查用户名-->
+	<bean name="/checkName" class="angus.action.CheckClientNameAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--注册-->
+	<bean name="/clientReg" class="angus.action.ClientRegAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<bean name="/albumlist" class="angus.action.AlbumListAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--登录后相册分页-->
+	<bean name="/albumpage" class="angus.action.AlbumPageAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--添加新相册-->
+	<bean name="/addalbum" class="angus.action.AddAlbumAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--修改用户资料-->
+	<bean name="/updateinfo" class="angus.action.UpdateClientInfoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--修改用户密码-->
+	<bean name="/updatepass" class="angus.action.UpdatePassAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--进入修改相册信息界面-->
+	<bean name="/viewalbuminfo" class="angus.action.ViewAlbumInfoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--修改相册信息-->
+	<bean name="/updatealbumInfo" class="angus.action.UpdateAlbumAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--查看相册-->
+	<bean name="/viewphotos" class="angus.action.ViewPhotosAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!-- 察看相册评论 -->
+	<bean name="/seealbumcomment" class="angus.action.ViewAlbumCommentAction">
+		<property name="cs" ref="clientService"/>
+	</bean>	
+	<!-- 添加相册评论 -->
+	<bean name="/addAlbumComment" class="angus.action.AddAlbumCommentAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--照片分页-->
+	<bean name="/managephotopage" class="angus.action.PhotoPageAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--添加照片-->
+	<bean name="/addphoto" class="angus.action.AddPhotoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--删除相册-->
+	<bean name="/delalbum" class="angus.action.DelAlbumAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--删除照片-->
+	<bean name="/delphoto" class="angus.action.DelPhotoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--进入修改相片信息界面-->
+	<bean name="/viewphotoinfo" class="angus.action.ViewPhotoInfoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--修改相片信息-->
+	<bean name="/updatephotoInfo" class="angus.action.UpdatePhotoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--查看单张图片-->
+	<bean name="/viewphoto" class="angus.action.ViewPhotoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--删除后查看相册-->
+	<bean name="/afterdel" class="angus.action.AfterDelPhotoAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--设置相册封面-->
+	<bean name="/changeCover" class="angus.action.ChangeCoverAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--根据种类查看相册-->
+	<bean name="/viewalbumsk" class="angus.action.ViewAlbumsAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--前台相册分页-->
+	<bean name="/otheralbums" class="angus.action.OtherAlbumsAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--进入相册-->
+	<bean name="/viewalbumk" class="angus.action.ViewAlbumClientAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--相片分页-->
+	<bean name="/otherphotosa" class="angus.action.OtherPhotosAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--查看照片-->
+	<bean name="/photoclient" class="angus.action.ViewPhotoClientAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--查看所有的评论-->
+	<bean name="/seecomment" class="angus.action.ViewPhotoClientAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--进入我的相册-->
+	<bean name="/myalbum" class="angus.action.MyAlbumAction"/>
+	<!--发表评论-->
+	<bean name="/addComment" class="angus.action.AddCommentAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--评论分页-->
+	<bean name="/othercomment" class="angus.action.OtherPhotoWordAction">
+		<property name="cs" ref="clientService"/>
+	</bean>
+	<!--添加种类-->
+	<bean name="/addkind" class="angus.action.AddKindAction">
+		<property name="cs" ref="clientService"/>
+		<property name="as" ref="adminService"/>
+	</bean>
+	<!--留言拦截器-->
+	<bean id="commentInter" class="angus.interceptor.CommentInterceptor"/>
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	    <property name="beanNames">
+            <list>
+                <value>/addComment</value>
+            </list>
+	    </property>
+        <property name="interceptorNames">
+            <list>
+                <value>commentInter</value>
+            </list>
+        </property>
+    </bean>
+	<!--前台拦截器-->
+	<bean id="clientInter" class="angus.interceptor.ClientInterceptor"/>
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	    <property name="beanNames">
+            <list>
+                <value>/addalbum</value>
+                <value>/albumlist</value>
+                <value>/albumpage</value>
+                <value>/addalbum</value>
+                <value>/updateinfo</value>
+                <value>/updatepass</value>
+                <value>/viewalbuminfo</value>
+                <value>/viewphotoinfo</value>
+                <value>/updatealbumInfo</value>
+                <value>/viewphotos</value>
+                <value>/managephotopage</value>
+                <value>/addphoto</value>
+                <value>/delalbum</value>
+                <value>/delphoto</value>
+                <value>/viewphoto</value>
+                <value>/afterdel</value>
+                <value>/seealbumcomment</value>
+                <value>/changeCover</value>
+            </list>
+	    </property>
+        <property name="interceptorNames">
+            <list>
+                <value>clientInter</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

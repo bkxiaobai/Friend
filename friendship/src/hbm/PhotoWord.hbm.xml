@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="angus.model">
+   
+	
+	<class name="PhotoWord" table="photo_word">
+        <id name="id" column="pw_id">
+            <generator class="identity"/>
+        </id>
+        <property name="title" column="pw_title"/>
+        <property name="content" column="pw_content"/>
+        <property name="addDate" column="commit_date"/>
+		<many-to-one name="photo" column="p_id" not-null="true" lazy="false"/>
+		<many-to-one name="client" column="c_id" not-null="true" lazy="false"/>
+    </class>
+
+
+</hibernate-mapping>

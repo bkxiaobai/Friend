@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="angus.model">
+   
+	
+	<class name="Photo" table="photo">
+        <id name="id" column="p_id">
+            <generator class="identity"/>
+        </id>
+        <property name="title" column="p_title"/>
+        <property name="desc" column="p_desc"/>
+        <property name="times" column="p_times"/>
+        <property name="picUrl" column="p_pic"/>
+        <property name="bigPicUrl" column="p_big_pic"/>
+        <property name="smallPicUrl" column="p_small_pic"/>
+        <property name="upDate" column="p_up_date"/>
+        <property name="cover" column="p_cover"/>
+		<many-to-one name="album" column="a_id" not-null="true" lazy="false"/>
+		<set name="photoWords" inverse="true">
+			<key column="p_id"/>
+			<one-to-many class="AlbumWord"/>
+		</set>
+    </class>
+
+
+</hibernate-mapping>

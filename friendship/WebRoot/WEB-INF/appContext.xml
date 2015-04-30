@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的Schema信息 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/friend?useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="user" value="root"/>
+        <property name="password" value="921118"/>
+        <property name="maxPoolSize" value="40"/>
+        <property name="minPoolSize" value="1"/>
+        <property name="initialPoolSize" value="1"/>
+        <property name="maxIdleTime" value="20"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+    </bean>
+
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+	<!-- 事务拦截器 -->
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager"/>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- 业务逻辑Bean -->
+	<!-- 前台用户 -->
+	<bean id="clientService" class="angus.service.impl.ClientServiceImpl">
+		<property name="ad" ref="albumDao"/>
+		<property name="kd" ref="kindDao"/>
+		<property name="pd" ref="photoDao"/>
+		<property name="pwd" ref="photoWordDao"/>
+		<property name="cd" ref="clientDao"/>
+		<property name="awd" ref="albumWordDao"/>
+
+	</bean>
+	<!-- 后台管理员 -->
+	<bean id="adminService" class="angus.service.impl.AdminServiceImpl">
+		<property name="ad" ref="adminDao"/>
+		<property name="kd" ref="kindDao"/>
+	</bean>
+</beans>

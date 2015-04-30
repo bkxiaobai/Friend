@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="angus.model">
+   
+	
+	<class name="Client" table="client">
+        <id name="id" column="c_id">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="c_name" unique="true"/>
+        <property name="pass" column="c_pass"/>
+        <property name="sex" column="c_sex"/>
+        <property name="mail" column="c_mail"/>
+        <property name="qq" column="c_qq"/>
+		<set name="albums" inverse="true">
+			<key column="c_id"/>
+			<one-to-many class="Album"/>
+		</set>
+		<!-- inverse属性 指定对于一对多关联关系，1的一端不能控制关联关系 这是为了更好的保证性能 -->
+		<set name="albumWords" inverse="true">
+			<key column="c_id"/>
+			<one-to-many class="AlbumWord"/>
+		</set>
+		<set name="photoWords" inverse="true">
+			<key column="c_id"/>
+			<one-to-many class="PhotoWord"/>
+		</set>
+    </class>
+
+
+</hibernate-mapping>
